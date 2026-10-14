@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katharina Tomilovskaya | Operations & Commercial Advisory</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 550px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            position: relative;
+        }
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        .lang-btn {
+            background: none;
+            border: none;
+            font-size: 13px;
+            font-weight: 600;
+            color: #adb5bd;
+            cursor: pointer;
+            padding: 2px 6px;
+            text-transform: uppercase;
+        }
+        .lang-btn:hover { color: #0077b5; }
+        .lang-btn.active { color: #111111; border-bottom: 2px solid #0077b5; }
+        .header { text-align: center; margin-bottom: 30px; margin-top: 10px; }
+        .avatar-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 15px auto;
+            display: block;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            border: 3px solid #ffffff;
+        }
+        h1 { font-size: 26px; font-weight: 700; color: #111; margin-bottom: 6px; }
+        .title { font-size: 14px; color: #6c757d; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+        .section-title { font-size: 13px; text-transform: uppercase; color: #0077b5; letter-spacing: 1.5px; font-weight: 700; margin: 30px 0 15px 0; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        ul { list-style: none; }
+        li { position: relative; padding-left: 20px; margin-bottom: 12px; font-size: 15px; color: #495057; }
+        li::before { content: "•"; color: #0077b5; font-weight: bold; position: absolute; left: 0; }
+        .btn {
+            display: block;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: 12px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+        .btn:hover { transform: translateY(-1px); opacity: 0.9; }
+        .btn-linkedin { background-color: #0077b5; margin-top: 25px; }
+        .btn-chat { background-color: #222222; }
+        .btn-email { background-color: #6c757d; }
+        .messenger-box {
+            display: none;
+            background: #f1f3f5;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 8px;
+            animation: fadeIn 0.3s ease;
+        }
+        .sub-btn {
+            display: block;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: 600;
+            margin: 6px 0;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+        .sub-btn:hover { transform: translateY(-1px); opacity: 0.9; }
+        .btn-tg { background-color: #26A5E4; }
+        .btn-wa { background-color: #25D366; }
+        .btn-wc { background-color: #07C160; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .footer { text-align: center; margin-top: 40px; font-size: 11px; color: #adb5bd; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Кнопки переключения -->
+        <div class="lang-switch">
+            <button id="btn-en" class="lang-btn active" onclick="changeLang('en')">EN</button>
+            <button id="btn-ru" class="lang-btn" onclick="changeLang('ru')">RU</button>
+        </div>
+
+        <div class="header">
+            <!-- Исправленная строчка для вашей фотографии -->
+            <img src="./photo.jpeg" alt="Katharina Tomilovskaya" class="avatar-img" onerror="this.style.display='none'">
+            
+            <!-- Имя на двух языках -->
+            <h1 class="lang-el en-text">Katharina Tomilovskaya</h1>
+            <h1 class="lang-el ru-text" style="display:none;">Екатерина Томиловская</h1>
+            
+            <!-- Профессия на двух языках -->
+            <div class="title lang-el en-text">Operations & Commercial Advisor</div>
+            <div class="title lang-el ru-text" style="display:none;">Консультант по операционному управлению и коммерческой стратегии</div>
+        </div>
+        <div class="section-title lang-el en-text">Expertise & Advisory</div>
+        <div class="section-title lang-el ru-text" style="display:none;">Экспертиза и Консалтинг</div>
+        <ul class="lang-el en-text">
+            <li><strong>Operational Excellence:</strong> Streamlining cross-functional workflows and infrastructure for scaling businesses.</li>
+            <li><strong>Commercial Leadership:</strong> Structuring business units to drive revenue growth and operational efficiency.</li>
+            <li><strong>Data & Product Analytics:</strong> Rebuilding reporting frameworks to enable data-driven executive decisions.</li>
+            <li><strong>Transformation Management:</strong> Navigating complex corporate turnarounds and restructuring.</li>
+        </ul>
+        <ul class="lang-el ru-text" style="display:none;">
+            <li><strong>Операционная эффективность:</strong> Оптимизация кросс-функциональных процессов и инфраструктуры для масштабирования бизнеса.</li>
+            <li><strong>Коммерческое лидерство:</strong> Выстраивание структуры бизнес-юнитов для роста выручки и эффективности.</li>
+            <li><strong>Продуктовая и бизнес-аналитика:</strong> Построение систем отчетности для принятия решений на уровне топ-менеджмента.</li>
+            <li><strong>Управление трансформацией:</strong> Проведение компаний через сложные этапы реструктуризации и изменений.</li>
+        </ul>
+        <div class="section-title lang-el en-text">Connect</div>
+        <div class="section-title lang-el ru-text" style="display:none;">Контакты</div>
+        <a href="https://linkedin.com/in/ekaterina-tomilovskaya/" target="_blank" class="btn btn-linkedin lang-el en-text">LinkedIn Profile</a>
+        <a href="https://linkedin.com" target="_blank" class="btn btn-linkedin lang-el ru-text" style="display:none;">Профиль LinkedIn</a>
+        <button onclick="toggleMessengers()" class="btn btn-chat lang-el en-text" id="main-chat-en">Message Me ↓</button>
+        <button onclick="toggleMessengers()" class="btn btn-chat lang-el ru-text" style="display:none;" id="main-chat-ru">Связаться в мессенджере ↓</button>
+        <div class="messenger-box" id="box-messengers">
+            <a href="https://t.me/Tomileka" target="_blank" class="sub-btn btn-tg">Telegram</a>
+            <a href="https://wa.me/79163471109" target="_blank" class="sub-btn btn-wa">WhatsApp</a>
+            <button onclick="copyWeChat('Tomileka')" class="sub-btn btn-wc" id="wechat-btn">WeChat (Copy ID)</button>
+        </div>
+        <a href="mailto:ekaterina.tomilovskaya@gmail.com" class="btn btn-email lang-el en-text">Send an Email</a>
+        <a href="mailto:ekaterina.tomilovskaya@gmail.com" class="btn btn-email lang-el ru-text" style="display:none;">Написать на почту</a>
+        <div class="footer">© 2026 Katharina Tomilovskaya. All rights reserved.</div>
+    </div>
+    <script>
+        function changeLang(lang) {
+            var enElements = document.getElementsByClassName('en-text');
+            var ruElements = document.getElementsByClassName('ru-text');
+            if (lang === 'en') {
+                for (var i = 0; i < enElements.length; i++) enElements[i].style.display = 'block';
+                for (var j = 0; j < ruElements.length; j++) ruElements[j].style.display = 'none';
+                document.getElementById('btn-en').classList.add('active');
+                document.getElementById('btn-ru').classList.remove('active');
+            } else {
+                for (var i = 0; i < enElements.length; i++) enElements[i].style.display = 'none';
+                for (var j = 0; j < ruElements.length; j++) ruElements[j].style.display = 'block';
+                document.getElementById('btn-en').classList.remove('active');
+                document.getElementById('btn-ru').classList.add('active');
+            }
+            document.getElementById('box-messengers').style.display = 'none';
+            document.getElementById('main-chat-en').textContent = "Message Me ↓";
+            document.getElementById('main-chat-ru').textContent = "Связаться в мессенджере ↓";
+        }
+
+        function toggleMessengers() {
+            var box = document.getElementById('box-messengers');
+            var btnEn = document.getElementById('main-chat-en');
+            var btnRu = document.getElementById('main-chat-ru');
+            if (box.style.display === 'block') {
+                box.style.display = 'none';
+                btnEn.textContent = "Message Me ↓";
+                btnRu.textContent = "Связаться в мессенджере ↓";
+            } else {
+                box.style.display = 'block';
+                btnEn.textContent = "Close Menu ↑";
+                btnRu.textContent = "Закрыть меню ↑";
+            }
+        }
+
+        function copyWeChat(wechatId) {
+            navigator.clipboard.writeText(wechatId).then(function() {
+                var btn = document.getElementById('wechat-btn');
+                btn.textContent = "ID Copied / Скопирован!";
+                setTimeout(function() {
+                    btn.textContent = "WeChat (Copy ID)";
+                }, 2500);
+            });
+        }
+    </script>
+</body>
+</html>
