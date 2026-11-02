@@ -159,16 +159,14 @@
         </div>
         <a href="mailto:ekaterina.tomilovskaya@gmail.com" class="btn btn-email lang-el en-text">Send an Email</a>
         <a href="mailto:ekaterina.tomilovskaya@gmail.com" class="btn btn-email lang-el ru-text" style="display:none;">Написать на почту</a>
-                <!-- ВЫТАЩЕННЫЕ НАРУЖУ И КОНТРАСТНЫЕ КНОПКИ CALENDLY -->
-        <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ekaterina-tomilovskaya/15min'}); return false;" class="btn btn-calendly lang-el en-text" id="calendly-en">Book a 15-Min Advisory Call</a>
-        <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ekaterina-tomilovskaya/15min'}); return false;" class="btn btn-calendly lang-el ru-text" style="display:none;" id="calendly-ru">Забронировать 15-мин консультацию</a>
-        
+        <!-- Удобная английская кнопка Calendly в стиле LinkedIn -->
+        <a href="https://calendly.com/ekaterina-tomilovskaya/15min" target="_blank" class="btn btn-calendly lang-el en-text">Book a 15-Min Advisory Call</a>
+
+        <!-- Удобная русская кнопка Calendly в стиле LinkedIn -->
+        <a href="https://calendly.com/ekaterina-tomilovskaya/15min" target="_blank" class="btn btn-calendly lang-el ru-text" style="display:none;">Забронировать 15-мин консультацию</a>
+
         <div class="footer">© 2026 Katharina Tomilovskaya. All rights reserved.</div>
     </div>
-
-    <!-- Внешние служебные скрипты Calendly (ВЕРНУЛИ ИСХОДНЫЕ АДРЕСА) -->
-    <link href="https://calendly.com" rel="stylesheet">
-    <script src="https://calendly.com" type="text/javascript" async></script>
 
    <script>
         function changeLang(lang) {
